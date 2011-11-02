@@ -1,0 +1,12 @@
++ base
++ base/www
++ /base/www/layout**
++ /base/www/components**
++ /base/www/config**
++ www/layout**
++ www/datastore/p**
++ www/components**
++ www/config**
++ base/www/layout**
++ base/www/config**
+- *

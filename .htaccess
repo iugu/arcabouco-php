@@ -1,0 +1,58 @@
+AddDefaultCharset UTF-8
+AddType text/x-component .htc
+
+<IfModule mod_security.c>
+   SecFilterEngine Off
+   SecFilterScanPOST Off
+</IfModule>
+<Files ~ "datastore/*">
+   Order allow,deny
+   Deny from all
+</Files>
+<Files ~ "config/*">
+   Order allow,deny
+   Deny from all
+</Files>
+<Files ~ ".yml">
+   Order allow,deny
+   Deny from all
+</Files>
+#php_value post_max_size 100M
+#php_value upload_max_filesize 16M
+RewriteEngine On
+RewriteBase /
+
+RewriteCond   %{HTTP_HOST}    !^$
+RewriteCond   %{HTTP_HOST}    ^[^.]+\.
+RewriteCond   %{REQUEST_URL}  !^/components/.*
+RewriteCond   %{REQUEST_URL}  !^/boot_camp.php
+RewriteCond   %{REQUEST_URL}  !^/router.php
+RewriteCond   %{REQUEST_URL}  !^/core/.*
+RewriteCond   %{REQUEST_URL}  !^/config/.*
+RewriteCond   %{REQUEST_FILENAME}   ^(.*)
+RewriteCond   %{HTTP_HOST}  ^([^.]+)\.
+RewriteCond   %{DOCUMENT_ROOT}/base/%1/$1 -f
+RewriteRule ^(.+) base/%1/$1 [L]
+
+RewriteCond   %{HTTP_HOST}    !^$
+RewriteCond   %{HTTP_HOST}    ^[^.]+\.
+RewriteCond   %{REQUEST_URL}  !^/components/.*
+RewriteCond   %{REQUEST_URL}  !^/boot_camp.php
+RewriteCond   %{REQUEST_URL}  !^/router.php
+RewriteCond   %{REQUEST_URL}  !^/core/.*
+RewriteCond   %{REQUEST_URL}  !^/config/.*
+RewriteCond   %{REQUEST_FILENAME}   ^(.*)
+RewriteCond   %{DOCUMENT_ROOT}/base/www/$1 -f
+RewriteRule ^(.+) base/www/$1 [L]
+
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteCond %{DOCUMENT_ROOT}/cache/$1index.html.gz -f
+RewriteRule ^(.*) cache/$1index.html.gz [L]
+
+RewriteCond %{DOCUMENT_ROOT}/cache/$1index.html -f
+RewriteRule ^(.*) cache/$1index.html [L]
+
+RewriteRule ^$ router.php?%{QUERY_STRING}&h=%{HTTP_HOST} [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ router.php?%{QUERY_STRING} [L]

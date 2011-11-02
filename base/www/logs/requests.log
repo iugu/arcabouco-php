@@ -1,0 +1,8 @@
+loaded library (/) : in 0.017720 cpu / 56 cps
+loaded core (/) : in 0.037189 cpu / 26 cps
+dispatched (/) : in 0.037542 cpu / 26 cps
+loaded library (/favicon.ico) : in 0.017304 cpu / 57 cps
+loaded library (/) : in 0.012914 cpu / 77 cps
+loaded core (/) : in 0.018204 cpu / 54 cps
+dispatched (/) : in 0.018393 cpu / 54 cps
+loaded library (/favicon.ico) : in 0.018367 cpu / 54 cps

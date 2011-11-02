@@ -1,0 +1,129 @@
+<? 
+$sidebar_e = core::template_render_unique_editable_area("sidebar_e",0);
+ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+<head><? web::before_header() ?>
+	<title><?= stripslashes("Página não encontrada"." - ".(isset($site_title)?(core::template_get_variable($site_title,'')):'')) ?></title>
+	<link rel="stylesheet" href="/layout/estilo-basico.css" type="text/css" />
+	<link rel="stylesheet" href="/layout/estilo.css" type="text/css" />
+	<link rel="icon" type="image/ico" href="/layout/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="/layout/favicon.ico" />
+<? web::after_header() ?></head>
+<body><? web::before_body() ?>
+
+
+<div id="page-wrapper">
+	<div id="page-container">
+		<div id="page-block">
+
+			<div id="header-wrapper">
+				<div id="header">
+					#header
+				</div>
+			</div>
+
+			<div id="content-wrapper">
+				<div id="content-container" class="cbf">
+					<div id="sidebar">
+						<div id="sidebar-block" class="cbf">
+							<h5>#topmenu</h5>
+							<?= build_menu_for_2( bimboo_getTopMenu(Array(Array('name'=>'Página Inicial','url'=>'/','depth'=>0))) ); ?>
+
+							<? if (strlen($sidebar_e)) { ?><div id="sidebar-e-text" class="cbf"><?= stripslashes((isset($sidebar_e)?(core::template_get_variable($sidebar_e,'')):'')) ?></div><? } ?>
+
+							<div id="newsletter">
+								<form class="form cbf" name="newsletter_form" id="newsletter_form" method="post" action="<?= url_for('register_newsletter_ajax','contacts') ?>">
+								<?= restful_form('POST') ?>
+									<div class="p10 cbf" style="background:#F2F2F2;border:1px solid #EFEFEF">
+										<h3>Newsletter</h3>
+										Receba as novidades de nosso site via e-mail.
+
+										<label for="nome">Nome</label>
+										<input type="text" id="nome" name="nome" class="w180" value="" />
+
+										<label for="email">E-mail</label>
+										<input type="text" id="email" name="email" class="w180" value="" />
+
+										<div class="mt10 w100 mla mra">
+											<button	type="submit"><span class="enable_icon"><img src="/layout/images/bt-email.gif" width="16" height="16" alt="" />Cadastrar</span></button>
+										</div>
+									</div>
+
+									<script type="text/javascript">
+										//<![CDATA[
+
+										function auto_input_tip( el , default_value ) {
+											var nwn = $(el);
+											if (nwn == null) return;
+											if (nwn.get('value') == '') nwn.set('value',default_value);
+											nwn.addEvent('focus', function() {
+												if (this.value == default_value) this.value = '';
+											});
+											nwn.addEvent('blur', function() {
+												if (this.value == '') this.value = default_value;
+											});
+										}
+
+										window.addEvent('domready', function() {
+
+											$('newsletter_form').set('send', 
+												{
+													method: 'POST',
+													onSuccess: function(response){
+														var object = JSON.decode(response);
+														alert(object.msg);
+													}
+												}
+											).addEvent('submit', function(event) {
+												event.preventDefault();
+												this.send();
+											});
+
+											auto_input_tip( 'nw_nome', 'Nome:' );
+											auto_input_tip( 'nw_email', 'E-mail:' );
+										});
+										//]]>
+									</script>
+								</form>
+							</div>
+
+						</div>
+					</div>
+					<div id="content">
+						<div id="content-block">
+							<h1 id="internal-title">Página não encontrada</h1>
+							<div id="breadcrumbs" class="cbf">
+								<div><div class="breadcrumb"><a href="/">Página Inicial</a> &raquo;</div></div>
+								<div class="breadcrumb_current"><span>Pagina não encontrada</span></div>
+							</div>
+							<div id="content-text" class="cbf">
+								<p>A página que você está tentando acessar não existe ou foi movida temporariamente. O link desta página está quebrado.</p>
+								<p><b>Sugestões:</b>
+									<ul>
+										<li>Verifique o endereço digitado e tente novamente.</li>
+										<li>Tente encontrar o conteúdo em nossa <a href="/">Página Inicial.</a></li>
+										<li>Se você caiu nesta página através de um link, entre em contato para tentar resolver o problema.</li>
+									</ul>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="footer-wrapper">
+				<div id="footer">
+					<p>#footer text</p>
+					<a href="#">footer link</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<? web::after_body() ?>
+</body>
+</html>

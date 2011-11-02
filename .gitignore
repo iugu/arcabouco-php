@@ -1,0 +1,7 @@
+sessions/
+sessions/*/*
+tmp/
+tmp/*/*
+cache/
+cache/*/*
+

@@ -1,0 +1,212 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Arca - pt_BR\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-05 09:29-0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Patrick Negri <patrick@lobodesign.com.br>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: ..\\..\\..\n"
+
+#: ..\..\../components/analytics/config.php:79
+msgid "Google Analytics"
+msgstr ""
+
+#: ..\..\../components/lwie/config.php:38
+msgid "Lightweight Inline Editor"
+msgstr ""
+
+#: ..\..\../components/00mt12/config.php:61
+msgid "Mootools"
+msgstr ""
+
+#: ..\..\../components/application_visuals/config.php:82
+msgid "controls"
+msgstr "controles"
+
+#: ..\..\../components/application_visuals/config.php:83
+msgid "menu"
+msgstr "menu"
+
+#: ..\..\../components/application_visuals/config.php:84
+msgid "application_visuals"
+msgstr "Visual Administrativo"
+
+#: ..\..\../components/application_visuals/config.php:85
+msgid "comentarios"
+msgstr "Comentários"
+
+#: ..\..\../components/galeria_basica/config.php:661
+msgid "Galeria Básica"
+msgstr ""
+
+#: ..\..\../components/pngfix/config.php:29
+msgid "PNGFix"
+msgstr ""
+
+#: ..\..\../components/remooz/config.php:29
+msgid "Remooz"
+msgstr ""
+
+#: ..\..\../components/content/config.php:2376
+msgid "editor"
+msgstr "editor"
+
+#: ..\..\../components/content/config.php:2377
+msgid "protect"
+msgstr "proteger"
+
+#: ..\..\../components/content/config.php:2378
+msgid "writer"
+msgstr "redator"
+
+#: ..\..\../components/content/config.php:2379
+msgid "name"
+msgstr "nome"
+
+#: ..\..\../components/content/config.php:2380
+#: ..\..\../components/users/users.add.php:15
+msgid "password"
+msgstr "senha"
+
+#: ..\..\../components/content/config.php:2381
+msgid "password confirmation"
+msgstr "confirmação de senha"
+
+#: ..\..\../components/content/config.php:2382
+msgid "user"
+msgstr "usuário"
+
+#: ..\..\../components/content/config.php:2383
+#: ..\..\../components/customfield_email/config.php:26
+msgid "is not a valid address"
+msgstr "não é um endereço válido"
+
+#: ..\..\../components/content/config.php:2384
+msgid "list"
+msgstr "listar"
+
+#: ..\..\../components/content/config.php:2385
+msgid "view"
+msgstr "ver"
+
+#: ..\..\../components/content/config.php:2386
+msgid "create"
+msgstr "inserir"
+
+#: ..\..\../components/content/config.php:2387
+msgid "update"
+msgstr "atualizar"
+
+#: ..\..\../components/content/config.php:2388
+msgid "delete"
+msgstr "deletar"
+
+#: ..\..\../components/content/config.php:2389
+msgid "all"
+msgstr "Todos"
+
+#: ..\..\../components/content/config.php:2390
+msgid "access"
+msgstr "acesso"
+
+#: ..\..\../components/content/config.php:2391
+msgid "descricao"
+msgstr "descrição"
+
+#: ..\..\../components/content/config.php:2392
+msgid "permissions"
+msgstr "permissões"
+
+#: ..\..\../components/content/config.php:2393
+msgid "email"
+msgstr "email"
+
+#: ..\..\../components/content/config.php:2394
+msgid "login"
+msgstr "login"
+
+#: ..\..\../components/content/config.php:2395
+msgid "deve ser positivo"
+msgstr "deve ser positivo"
+
+#: ..\..\../components/swfupload/config.php:29
+msgid "SWFUpload"
+msgstr ""
+
+#: ..\..\../components/deploy/config.php:323
+msgid "Deploy Module"
+msgstr ""
+
+#: ..\..\../components/users/config.php:529
+msgid "administrative"
+msgstr "administrativo"
+
+#: ..\..\../core/helpers.php:202
+msgid "error"
+msgstr "erro"
+
+#: ..\..\../core/helpers.php:202
+#, php-format
+msgid "prohibited this %s from being saved"
+msgstr "ao tentar salvar o %s"
+
+#: ..\..\../core/helpers.php:203
+msgid "There were problems with the following fields:"
+msgstr "Ocorreu problemas com os seguintes campos:"
+
+#: ..\..\../core/orm.php:560
+msgid "is missing or invalid"
+msgstr "está faltando ou é inválido"
+
+#: ..\..\../core/orm.php:586
+msgid "cannot be blank"
+msgstr "não pode ficar em branco"
+
+#: ..\..\../core/orm.php:600
+msgid "has already been taken"
+msgstr "já está em uso"
+
+#: ..\..\../core/orm.php:628
+msgid "is too short"
+msgstr "é muito pequeno"
+
+#: ..\..\../core/orm.php:649
+msgid "is too long"
+msgstr "é muito longo"
+
+#: ..\..\../core/orm.php:670
+#, php-format
+msgid "must have %d character(s)"
+msgstr "precisa ter %d caractere(s)"
+
+#: ..\..\../core/orm.php:692
+msgid "must be accepted"
+msgstr "precisa ser aceito"
+
+#: ..\..\../core/orm.php:715
+msgid "cannot be used"
+msgstr "não pode ficar em branco"
+
+#: ..\..\../core/orm.php:738
+msgid "cannot be value"
+msgstr "não pode ficar em branco"
+
+#: ..\..\../core/orm.php:760
+msgid "is invalid"
+msgstr "está faltando ou é inválido"
+
+#: ..\..\../core/orm.php:784
+msgid "doesn't match confirmation"
+msgstr "não confere"
+
+#~ msgid "title"
+#~ msgstr "título"
+#~ msgid "Have a nice day"
+#~ msgstr "Tenha um ótimo dia"
+

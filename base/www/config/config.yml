@@ -1,0 +1,13 @@
+application_name: Empty Application
+company_name:
+address_line_1:
+address_line_2: 
+contact_phone:
+default_mailbox:
+system_inflector_language: pt_BR
+system_timezone: -4
+google_maps_key: 
+  - 
+    host: localhost
+    key: >
+      ABQIAAAAQTZOraQBHs6KEPV1Ab0xGhT2yXp_ZAY8_ufC3CFXhHIE1NvwkxSgK1QsUUEoKQUJgcep99je_HV7Uw

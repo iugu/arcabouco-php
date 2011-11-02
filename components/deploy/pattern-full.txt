@@ -1,0 +1,14 @@
++ boot_camp.php
++ .htaccess
++ gera_conteudo.php
++ router.php
++ LICENSE
++ /layout**
++ /datastore**
++ /config**
++ /core**
++ /locale**
++ /midia**
++ /components**
++ /maintenance**
+- *

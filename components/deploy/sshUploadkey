@@ -1,0 +1,20 @@
+# Set variables
+set user [lrange $argv 0 0]
+set pass [lrange $argv 1 1]
+set host [lrange $argv 2 2]
+set file [lrange $argv 3 3]
+set timeout -1
+ 
+# Connect using ssh command
+spawn rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" $file $user@$host:~/ 
+match_max 100000
+
+#expect "*Are you sure you want to continue connecting*"
+#send   "yes\r"
+
+expect  "*password: $"
+send    "$pass\n"
+ 
+#sleep 2
+expect eof
+#interact

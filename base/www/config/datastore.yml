@@ -1,0 +1,11 @@
+development:
+  adapter: sqlite2
+  database: datastore/development.datastore
+
+test:
+  adapter: sqlite2
+  database: datastore/test.datastore
+
+production:
+  adapter: sqlite2
+  database: datastore/production.datastore

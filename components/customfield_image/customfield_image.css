@@ -1,0 +1,19 @@
+@media screen {
+
+	.customfield_image {
+		position:relative;
+	}
+	
+	.customfield_image .editor {
+		display:none;
+	}
+	
+	.customfield_image .editor .box {
+		height:100%;
+	}
+	
+	.customfield_image .display {
+		background:#ECECEC;border:1px solid #999
+	}
+
+}
